@@ -45,7 +45,7 @@ st.markdown("""
 products = pd.DataFrame({
     "Product": ["Shirt", "Jeans", "Shoes", "Cap", "Watch", "Jacket"],
     "Category": ["Clothing", "Clothing", "Footwear", "Accessories", "Accessories", "Clothing"],
-    "Price": [1500, 2500, 3500, 2000, 500, 3000],
+    "Price": [150, 250, 350, 80, 200, 300],
     "Description": [
         "Premium cotton shirt, perfect for casual and formal occasions.",
         "Slim-fit jeans with a modern cut and stretch fabric.",
@@ -77,7 +77,7 @@ st.markdown(f"<div class='shop-header'>SHOP.CO 🛒 <span class='cart-badge'>{ca
 # ---- Filters ----
 st.sidebar.header("🔍 Filter Products")
 category_filter = st.sidebar.multiselect("Category", options=products["Category"].unique())
-max_price = st.sidebar.slider("Max Price", 500, 5000, 5000)
+max_price = st.sidebar.slider("Max Price", 50, 500, 500)
 search_term = st.sidebar.text_input("Search Product")
 
 filtered = products[
@@ -110,7 +110,7 @@ for i, row in filtered.iterrows():
     with cols[i % 3]:
         st.image(row["Image"], width=200)
         st.markdown(f"**{row['Product']}**")
-        st.caption(f"₹{row['Price']} - {row['Category']}")
+        st.caption(f"${row['Price']} - {row['Category']}")
         if st.button("View Details", key=f"view_{i}"):
             st.session_state.view_product = row
             st.rerun()
