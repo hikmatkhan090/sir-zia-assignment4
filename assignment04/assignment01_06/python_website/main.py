@@ -137,10 +137,8 @@ else:
 
 # ---- Footer ----
 st.markdown("""
-    <div class='footer'>
-        Made with ❤️ by <b>HIKMAT KHAN</b><br>
-        <a href="https://github.com/hikmatkhan090" target="_blank">GitHub</a> |
-        <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a> |
-        <a href="https://www.linkedin.com/in/hikmat-khan-652301256/" target="_blank">LinkedIn</a>
-    </div>
+<div class="purple-footer">
+    <p class="footer-quote">"Security is a process, not a product."</p>
+    <p class="footer-author">🔒 Designed by HIKMAT KHAN</p>
+</div>
 """, unsafe_allow_html=True)
